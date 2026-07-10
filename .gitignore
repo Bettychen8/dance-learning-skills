@@ -1,0 +1,6 @@
+.DS_Store
+source/
+output/
+*.mp4
+*.mov
+*.zip
