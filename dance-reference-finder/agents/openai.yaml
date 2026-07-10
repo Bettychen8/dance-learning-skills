@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dance Reference Finder"
+  short_description: "Find high-signal Douyin dance references"
+  default_prompt: "Use $dance-reference-finder to find up to three Douyin references I can save manually."
