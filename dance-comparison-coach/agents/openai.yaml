@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dance Comparison Coach"
+  short_description: "Create synchronized dance comparisons and coaching notes"
+  default_prompt: "Use $dance-comparison-coach to compare my dance video with a teacher video; for group clips, I am [position and clothing] and the reference dancer is [position and clothing]."
