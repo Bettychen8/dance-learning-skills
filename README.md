@@ -24,6 +24,25 @@
 
 本 Skill 不控制抖音客户端、不自动下载视频，也不绕过平台登录或保存限制。
 
+### 热门舞蹈教学检索
+
+目录：[`hot-dance-tutorial-search`](hot-dance-tutorial-search/)
+
+使用用户自己登录的 Chrome，在小红书与抖音查找最近一个月点赞较高的爵士、KPOP、女团舞教学视频；抖音会同时检索关键词和 `#抖音潮流舞蹈大赛` 标签下的相关内容。按歌曲去重，同一首歌优先保留抖音版本，最多返回 10 条。
+
+**输入**
+
+- 可选的时间范围；默认最近一个月
+- 可选的舞种、歌曲、编舞人或难度关键词
+
+**输出**
+
+- 最多 10 条歌曲名可点击的官方视频链接
+- 页面可见的点赞量
+- 编舞人（页面明确标注时）和舞种、镜面、分解、零基础等标签
+
+本 Skill 只读取搜索页可见点赞量，不逐条查收藏量；不自动点赞、收藏、下载、发布内容，也不绕过平台登录或限制。
+
 ### 舞蹈对比教练
 
 目录：[`dance-comparison-coach`](dance-comparison-coach/)
@@ -58,6 +77,7 @@ git clone https://github.com/Bettychen8/dance-learning-skills.git
 ```bash
 cp -R dance-learning-skills/dance-reference-finder ~/.codex/skills/
 cp -R dance-learning-skills/dance-comparison-coach ~/.codex/skills/
+cp -R dance-learning-skills/hot-dance-tutorial-search ~/.codex/skills/
 ```
 
 也可以在 GitHub 页面选择 **Code → Download ZIP**，解压后复制对应的 Skill 文件夹。
@@ -68,6 +88,12 @@ cp -R dance-learning-skills/dance-comparison-coach ~/.codex/skills/
 
 - 可访问网页和抖音网页端
 - 用户自行使用抖音官方客户端保存选中的参考视频
+
+### 热门舞蹈教学检索
+
+- 可访问小红书和抖音网页端
+- Chrome 中已登录用户自己的小红书和抖音账号
+- 小红书链接中的临时校验参数可能随时间失效，需要重新搜索获取
 
 ### 舞蹈对比教练
 
@@ -83,12 +109,17 @@ cp -R dance-learning-skills/dance-comparison-coach ~/.codex/skills/
 ```
 
 ```text
+使用 $hot-dance-tutorial-search 搜索最近一个月热门的爵士、KPOP、女团舞教学视频，给我歌曲名可点击、点赞量和标签。
+```
+
+```text
 这是我的舞蹈视频和老师视频。请自动判断方向、寻找共同动作起点并生成同步对比视频。我的视频里，我是画面中间穿黑色上衣和白色裤子的人。
 ```
 
 ## 说明
 
 - 搜索结果只把页面明确显示的点赞数写成“赞”，不会猜测收藏数。
+- 热门舞蹈教学检索会额外扫描抖音的 #抖音潮流舞蹈大赛 标签，并按歌曲去重后优先保留抖音结果。
 - 动作点评只描述画面中能确认的差距，不提供虚假的精确评分。
 - 视频版权和平台内容使用应遵守原平台规则，并尊重原作者权益。
 
