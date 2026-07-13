@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hot Dance Tutorial Search"
+  short_description: "Find recent high-like dance tutorials across two platforms"
+  default_prompt: "Use $hot-dance-tutorial-search to find recent high-like jazz, KPOP, and girl-group dance tutorials."
