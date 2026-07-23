@@ -1,4 +1,4 @@
 interface:
-  display_name: "Hot Dance Tutorial Search"
-  short_description: "Find recent high-like dance tutorials across two platforms"
-  default_prompt: "Use $hot-dance-tutorial-search to find recent high-like jazz, KPOP, and girl-group dance tutorials."
+  display_name: "热门舞蹈教学检索"
+  short_description: "跨平台发现热门歌曲并补搜高赞舞蹈教学"
+  default_prompt: "使用 $hot-dance-tutorial-search 搜索最近一个月热门的爵士、KPOP、女团舞教学视频，并按歌曲补搜后给出 Top 10。"
